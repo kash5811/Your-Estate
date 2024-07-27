@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+ import React, { useEffect, useState } from 'react'
 import {useNavigate} from 'react-router-dom'
 import ListingItem from '../assets/components/ListingItem';
+
 
 const Search = () => {
     const [sidebardata , setSidebardata] = useState({
@@ -21,6 +22,7 @@ const [listings , setListings] = useState([]);
 const [showMore , setShowMore] = useState(false);
 
 console.log(listings)
+console.log(sidebardata)
 
 useEffect(() =>{
     const urlParams = new URLSearchParams(location.search);
@@ -147,7 +149,7 @@ const handleSubmit = (e) => {
         </div>
         <div className='flex gap-2 flex-wrap items-center'>
     <label className='font-semibold'>Type:</label>
-    <div className='flex gap-2 font-semibold hidden'>
+    <div className='flex gap-2 font-semibold '>
     <input className='w-5' type='checkbox' id='all'
 
         onChange={handleChange}
